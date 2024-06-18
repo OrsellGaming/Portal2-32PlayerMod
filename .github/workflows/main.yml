@@ -31,7 +31,7 @@ jobs:
           script-name: kasa_cli
           onefile: true
           noinclude-data-files: "pygame/freesansbold.ttf"
-          include-data-dir: src/GUI src/Languages
+          include-data-dir: src/GUI = src/Languages
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
