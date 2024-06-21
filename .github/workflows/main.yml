@@ -31,7 +31,7 @@ jobs:
           script-name: src/MainWindow.py
           onefile: true
           noinclude-data-files: "pygame/freesansbold.ttf"
-          include-data-dir: "src/Languages=Languages | src/GUI=GUI"
+          include-data-dir: "'src/Languages'='Languages' | 'src/GUI'='GUI'"
           windows-icon-from-ico: "src/GUI/images/p2mm-icon.ico"
           product-name: "Portal 2: Multiplayer Mod Launcher"
           file-description: "The launcher for P2:MM."
