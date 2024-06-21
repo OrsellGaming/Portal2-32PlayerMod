@@ -31,7 +31,6 @@ jobs:
           script-name: src/MainWindow.py
           onefile: true
           noinclude-data-files: "pygame/freesansbold.ttf"
-          include-data-dir: "src/GUI"
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
