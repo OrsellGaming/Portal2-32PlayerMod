@@ -3,7 +3,7 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [self-hosted, windows-latest]
+        os: [n, windows-latest]
 
     runs-on: ${{ matrix.os }}
 
