@@ -1060,7 +1060,11 @@ def MountModOnly() -> bool:
 
 
 def LoadTranslations() -> None:
-
+    
+    files = [f for f in os.listdir('.')]
+    for f in files:
+        print(f)
+        
     langPath = f"Languages/{GVars.configData['Active-Language']['value']}.json"
 
     if not os.path.exists(langPath):
