@@ -3,7 +3,7 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [self-hosted, windows-latest]
 
     runs-on: ${{ matrix.os }}
 
@@ -31,7 +31,7 @@ jobs:
           script-name: kasa_cli
           onefile: true
           noinclude-data-files: "pygame/freesansbold.ttf"
-          'include-data-dir': ("src/GUI"="GUI", "src/Languages"="Languages")
+          include-data-dir: ("src/GUI"="GUI")
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
