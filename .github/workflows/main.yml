@@ -3,7 +3,7 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [self-hosted, windows-latest]
+        os: [self-hosted]
 
     runs-on: ${{ matrix.os }}
 
@@ -14,7 +14,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+          python-version: '3.10' # Version range or exact version of a Python version to use, using SemVer's version range syntax
           architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
           cache: 'pip'
           cache-dependency-path: |
@@ -28,10 +28,10 @@ jobs:
         uses: Nuitka/Nuitka-Action@main
         with:
           nuitka-version: main
-          script-name: kasa_cli
+          script-name: src/MainWindow.py
           onefile: true
           noinclude-data-files: "pygame/freesansbold.ttf"
-          include-data-dir: ("src/GUI"="GUI")
+          include-data-dir: "src/GUI"
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
